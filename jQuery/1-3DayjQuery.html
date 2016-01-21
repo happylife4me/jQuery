@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td><button id="btn1" class="panelButton" data-panel="panel1">button1</button></td>
+            <td><button id="btn2" class="panelButton" data-panel="panel2">button2</button></td>
+            <td><button id="btn3" class="panelButton" data-panel="panel3">button3</button></td>
+            <td><button id="btn4" class="panelButton" data-panel="panel4">button4</button></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <div id="panel1">
+                    <table border="1">
+                        <tr>
+                            <th>Header</th>
+                        </tr>
+                        <tr>
+                            <td class="panel-body">
+                                Panel - 1
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div id="panel2">
+                    <table border="1">
+                        <tr>
+                            <th>Header</th>
+                        </tr>
+                        <tr>
+                            <td class="panel-body">
+                                Panel - 2
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div id="panel3">
+                    <table border="1">
+                        <tr>
+                            <th>Header</th>
+                        </tr>
+                        <tr>
+                            <td class="panel-body">
+                                Panel - 3
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div id="panel4">
+                    <table border="1">
+                        <tr>
+                            <th>Header</th>
+                        </tr>
+                        <tr>
+                            <td class="panel-body">
+                                Panel - 4
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>       
+</table>
+    <script>
+        $(document).ready(function () {
+            $('.panelButton').on("click", function () {
+                var panId = $(this).attr("data-panel");
+                $('#' + panId).toggle(1000);
+                $("#" + panId + " .panel-body").html("Hay I'm working");
+            });
+            
+        });
+    </script>
+</body>
+</html>

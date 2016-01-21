@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html ng-app="">
+<head>
+    <title>AngularJS Tutorial 7: ng-repeat</title>
+    <script src="JS/angular.min.js"></script>
+</head>
+<body>
+    <div ng-init="myFavLan=[
+         {name:'PHP',extension:'.php'},
+         {name:'JavaScript',extension:'.js'},
+         {name:'C#',extension:'.cs'}
+         ]">
+
+        <p ng-repeat="lan in myFavLan">
+            Name : {{lan.name }} <br />
+            Extension :{{lan.extension}}
+        </p>
+    </div>
+</body>
+</html>

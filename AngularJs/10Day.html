@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AngularJS Tutorial 10: Introduction To Filters</title>
+    <script src="JS/angular.js"></script>
+</head>
+<body ng-app="">
+    Your Name :  <input type="text" ng-model="name"/>
+    <br />
+    <br />
+    Welcome {{name | uppercase}}
+    <br />
+    -------------------------------------------------------------------------
+    <br />
+    Currency :  <input type="text" ng-model="price" />
+    <br />
+    <br />
+    Price :  {{price}}
+    <br />
+    Price With $ Symbal : {{price| currency : "$ "}}
+    <br />
+    Price With Rs. Symbal  : {{price| currency : "Rs. "}}
+    <br />
+    Price With Rs. Symbal with 5 dicmal : {{price | currency : "Rs. " : 5}}
+    <br />
+    Price in number formate  : {{price | number}}
+    <br />
+    Price in number formate  : {{price | number : 2}}
+</body>
+</html>

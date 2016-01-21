@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="myLanguageApp">
+<head>
+    <title>AngularJS Tutorial 9: Introduction To Controllers</title>
+    <script src="JS/angular.js"></script>
+</head>
+<body>
+
+    <div ng-controller="language">
+        <button ng-click="lang('java')">Java</button>
+        <button ng-click="lang('cs')">C#</button>
+        <button ng-click="lang('php')">PHP</button>
+        <button ng-click="lang('C++')">C++</button>
+
+        <br />
+        <br />
+        <div>Selected languages : {{myFavlanguage}}</div>
+    </div>
+
+    <script>
+
+        var application = angular.module("myLanguageApp", []);
+        application.controller('language', function ($scope) {
+            $scope.myFavlanguage = "NA";
+            $scope.lang= function(lang)
+            {
+                $scope.myFavlanguage = lang;
+            }
+        });
+    </script>
+</body>
+</html>

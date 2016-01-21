@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html ng-app="">
+<head>
+    <title>AngularJS Tutorial 3: ng-model and ng-bind directives</title>
+    <script src="JS/angular.min.js"></script>
+</head>
+<body>
+    <input type="text" ng-model="name" /> <br />
+    Input Text Vale :  <div ng-bind="name"></div>
+    <br />
+    -------------------------------------------------------
+    <br />
+    <div ng-model="divName" contenteditable="true"></div>
+    Div Text Value [not going to work for this ]: <div ng-bind="divName"></div>
+</body>
+</html>
