@@ -60,6 +60,7 @@
     <Content Include="10Day.html" />
     <Content Include="11Day.html" />
     <Content Include="12Day.html" />
+    <Content Include="13Day.html" />
     <Content Include="2Day.html" />
     <Content Include="3Day.html" />
     <Content Include="4Day.html" />
@@ -68,12 +69,16 @@
     <Content Include="7Day.html" />
     <Content Include="8Day.html" />
     <Content Include="9Day.html" />
+    <Content Include="Includes\13DayByePage.html" />
+    <Content Include="Includes\13DayHelloPage.html" />
+    <Content Include="Includes\13DayWelcomePage.html" />
     <Content Include="Includes\Dummy1.html" />
     <Content Include="UserJs\12DayContoller.js" />
     <Content Include="JS\angular-route.js" />
     <Content Include="JS\angular.js" />
     <Content Include="JS\angular.min.js" />
     <Content Include="JS\jquery-1.11.3.js" />
+    <Content Include="UserJs\13DayContoller.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
