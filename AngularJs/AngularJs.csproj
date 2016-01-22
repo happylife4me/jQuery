@@ -61,6 +61,7 @@
     <Content Include="11Day.html" />
     <Content Include="12Day.html" />
     <Content Include="13Day.html" />
+    <Content Include="16Day.html" />
     <Content Include="15Day.html" />
     <Content Include="14Day.html" />
     <Content Include="2Day.html" />
@@ -85,6 +86,7 @@
     <Content Include="UserJs\13DayContoller.js" />
     <Content Include="UserJs\15DayContoller.js" />
     <Content Include="UserJs\14DayContoller.js" />
+    <Content Include="UserJs\16DayContoller.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
