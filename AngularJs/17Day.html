@@ -1,21 +1,20 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>AngularJS Tutorial 16: $http Service</title>
+    <title>AngularJS Tutorial 17: Creating Simple Search Box</title>
     <script src="JS/angular.js"></script>
     <script src="JS/angular-route.js"></script>
-    <script src="UserJs/16DayContoller.js"></script>
+    <script src="UserJs/17DayContoller.js"></script>
 </head>
 <body ng-app="mainApp">
+    <input type="text" ng-model="searchBox" />
     <div ng-controller="people">
         <h2>Names and Age of the Home</h2>
         <ul>
-            <li ng-repeat="person in persons">
+            <li ng-repeat="person in persons | filter:searchBox">
                 Name : {{person.Name}} & Age :  {{person.Age}}
             </li>
-
         </ul>
-
     </div>
 </body>
 </html>

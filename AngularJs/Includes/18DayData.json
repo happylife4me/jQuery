@@ -1,0 +1,29 @@
+﻿{
+	"records":[
+	{
+		"Name":"Jagadeesh",
+		"Age":"33",
+		"FovColor":"White"
+	},
+	{
+		"Name":"Uma Devi",
+		"Age":"31",
+		"FovColor":"Red"
+	},
+	{
+		"Name":"Ruthvik",
+		"Age":"6",
+		"FovColor":"Green"
+	},
+	{
+		"Name":"Mohan Rao",
+		"Age":"65",
+		"FovColor":"Pink"
+	},
+	{
+		"Name":"Kamaskhama",
+		"Age":"59",
+		"FovColor":"Black"
+	}
+	]
+}

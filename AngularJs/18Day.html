@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AngularJS Tutorial 18: Advance Search Box</title>
+    <script src="JS/angular.js"></script>
+    <script src="JS/angular-route.js"></script>
+    <script src="UserJs/18DayContoller.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div id="searchBoxes">
+        Global Search Filter : <input type="text" ng-model="globalSearch.$" /> <br />
+        Name Search Filter : <input type="text" ng-model="globalSearch.Name" /> <br />
+        Age Search Filter : <input type="text" ng-model="globalSearch.Age" /> <br />
+        Color Search Filter : <input type="text" ng-model="globalSearch.FovColor" /> <br />
+    </div>
+    
+    <div ng-controller="people">
+        <h2>Names and Age of the Home</h2>
+        <ul>
+            <li ng-repeat="person in persons | filter:globalSearch">
+                {{"Name :" + person.Name + ",  Age : " + person.Age +", Color : " + person.FovColor }}
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
