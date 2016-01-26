@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AngularJS Tutorial 20: Range Based Loops</title>
+    <script src="JS/angular.js"></script>
+    <script src="UserJs/20DayContoller.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div ng-controller="app">
+        <ul>
+            <li ng-repeat="i in myRange">
+                {{i}}
+            </li>
+        </ul>
+    </div>
+    --------------------------------------------------------------<br />
+    <div ng-controller="rangeApp">
+        <ul>
+            <li ng-repeat="i in myRange track by $index">
+                dfndkfdf -  {{$index}}
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
