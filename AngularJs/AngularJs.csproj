@@ -74,6 +74,9 @@
     <Content Include="24Day.html" />
     <Content Include="26Day.html" />
     <Content Include="25Day.html" />
+    <Content Include="27Day.html" />
+    <Content Include="28Day.html" />
+    <Content Include="29Day.html" />
     <Content Include="2Day.html" />
     <Content Include="3Day.html" />
     <Content Include="4Day.html" />
@@ -107,6 +110,9 @@
     <Content Include="UserJs\21DayController.js" />
     <Content Include="UserJs\26DayController.js" />
     <Content Include="UserJs\25DayController.js" />
+    <Content Include="UserJs\27DayController.js" />
+    <Content Include="UserJs\28DayController.js" />
+    <Content Include="UserJs\29DayController.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
