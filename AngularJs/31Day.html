@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AngularJS Tutorial 31: Creating To-Do App: Part 3</title>
+    <script src="JS/angular.js"></script>
+    <script src="UserJs/31DayController.js"></script>
+    <style>
+        span.done-true{
+            color:gray;
+            font-style:italic;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body ng-app="mainApp" ng-controller="app">
+    <h1 style="text-align:center">Add A Task</h1>
+
+    <input ng-model="txtTask" ng-keyup="searchEnter()" type="text" style="display:block;margin:0 auto;padding:5px;font-size:15px;" />
+
+    <div id="taskToShow">
+        <ul>
+            <li ng-repeat="oneTask in tasks">
+                <span class="done-{{oneTask.status}}">
+                    <input type="checkbox" ng-model="oneTask.status" />
+                    {{oneTask.taskMsg}}
+                </span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
