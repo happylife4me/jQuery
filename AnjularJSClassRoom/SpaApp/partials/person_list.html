@@ -1,0 +1,21 @@
+﻿<h3>Person List</h3>
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Actions</td>
+                <td>Search</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in persons">
+                <td>{{p.id}}</td>
+                <td>{{p.name |uppercase}}</td>
+                <td><a href="#persons/{{p.id}}">Details</a></td>
+                <td><a href="#persons/{{p.id}}/{{p.age}}">id and age</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

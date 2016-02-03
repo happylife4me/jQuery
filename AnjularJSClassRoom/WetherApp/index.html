@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp" class="well" ng-controller="WeatherController">
+    <h1>Weather App in Angular JS using $http Promise API</h1>
+
+    City : <input type="text" ng-model="city"/>
+    <br /><br />
+    Country : <input type="text" ng-model="country" />
+    <br />
+    <button ng-click="getWeather()">Get Weather</button>
+    <br />
+    <br />
+
+    <fieldset style="background-color:yellow">
+        <h2>Weather Condition {{weatherDesc}}</h2>
+    </fieldset>
+
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="WetherConroller.js"></script>
+</body>
+</html>

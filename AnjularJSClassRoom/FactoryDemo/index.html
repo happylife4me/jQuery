@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp" class="well">
+
+    <div ng-controller="FirstController">
+        <ul ng-repeat="u in users">
+            <li>
+                {{u}}
+            </li>
+        </ul>
+    </div>
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    <br />
+    <div ng-controller="SecondController">
+        {{firstuser}}
+    </div>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

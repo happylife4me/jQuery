@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/angular.min.js"></script>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("OutterController", function ($scope, $rootScope) {
+            $rootScope.x = 10;
+            $scope.y = 20;
+            $scope.x = 201;
+        });
+
+
+        app.controller("InnerController", function ($scope, $rootScope) {
+            $rootScope.x = 20010;
+            $scope.x = 2011;
+            $scope.z = 30;
+        });
+    </script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="OutterController">
+        OutterController --> X : {{x}} - Y : {{y}}
+        parents x : {{ $parent.x}}
+        <div ng-controller="InnerController">
+            InnerController --> X : {{x}} - Y {{y}} - Z {{z}}
+            <br />
+            parents x : {{ $parent.$parent.x}}
+        </div>
+    </div>
+</body>
+</html>

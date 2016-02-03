@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-controller="TestController">
+    <h1 class="well">{{project}}</h1>
+
+    Name : <input type="text" ng-model="Fname"/> {{Fname + LName}}
+    <br />
+    <br />
+    Email : <input type="text" ng-model ="email"/> {{email}}
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

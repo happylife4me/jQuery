@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>AngularJS Tutorial 32: Creating To-Do App: Part 4</title>
+    <title>AngularJS Tutorial 35: Creating To-Do App - Part 7</title>
     <script src="JS/angular.js"></script>
-    <script src="UserJs/32DayController.js"></script>
+    <script src="UserJs/35DayController.js"></script>
     <style>
         span.done-true{
             color:gray;
@@ -23,9 +23,9 @@
 
     <div id="taskToShow">
         <ul>
-            <li ng-repeat="oneTask in tasks">
+            <li ng-repeat="oneTask in tasks track by $index">
                 <input type="checkbox" ng-model="oneTask.status" />
-                <span contenteditable="false" ng-dblclick="contentEdit()" class="done-{{oneTask.status}}">
+                <span contenteditable="false" ng-keydown="enterAgain(oneTask.taskMsg)" ng-dblclick="contentEdit(oneTask.taskMsg)" class="done-{{oneTask.status}}">
                     {{oneTask.taskMsg}}
                 </span>
             </li>

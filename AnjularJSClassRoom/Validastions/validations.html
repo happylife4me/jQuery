@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+    <script src="../Scripts/angular.min.js"></script>
+
+    <script type="text/javascript">
+        angular.module("myapp", [])
+            .controller("UserController", function ($scope) {
+                $scope.user = {};
+                $scope.saveUser = function () {
+                    if($scope.myform.$vaild)
+                    {
+                        alert("saved user details using ajasx($http) " + $scope.user.firstname);
+                    }
+                    else
+                    {
+                        alert("unable to save. Validation errror!");
+                    }
+                }
+            });
+    </script>
+
+    <style>
+        .error-message{ color:red;}
+        input.ng-dirty.ng-invalid{background-color:red}
+        input.ng-valid.ng-dirty{background-color:green}
+    </style>
+</head>
+<body ng-app="myapp" ng-controller="UserController" class="well">
+    <h3>Registration Form</h3>
+    <form name="myform" novalidate>
+
+        First Name : <input type="text" name="firstname" ng-model="user.firstname" ng-required="true" ng-minlength="3" />
+        <span class="error-message" ng-show="myfrom.firstname.$dirty && myfrom.firstname.$error.required">The First Name should be min 3 char</span>
+        <br />
+        Phone : <input type="text" name="phone" ng-model="user.phone" ng-maxlength="10" ng-minlength="10" ng-pattern="/^\d{10}$/"/>
+        <span class="error-message" ng-show="myfrom.phone.$dirty && myfrom.phone.$invalid">The phone number must be of 10 digits</span>
+
+        <br />
+        <h4> your data is  : {{user |json}}</h4>
+        <br />
+
+        <input type="submit" value="Save" ng-disabled="myfrom.$invalid" class="btn" ng-click="saveUser()"/>
+    </form>
+
+</body>
+</html>

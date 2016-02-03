@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+    <script src="../Scripts/angular.min.js"></script>
+
+    <script type="text/ng-template" id="scopeTemplate">
+        <div class="panel-body">
+            <input type="text" ng-model="username" />
+            <div class="text-success">{{greetFn()}}</div>
+        </div>
+    </script>
+    <script type="text/javascript">
+        angular.module("exampleApp", [])
+            .directive("scopeDemo", function () {
+                return {
+                    template: function () {
+                        return angular.element(document.querySelector('#scopeTemplate')).html();
+                    },
+                    //scope: {}
+                    scope: {
+                        username: "=",
+                        greetFn: "&greethim"
+                    } // :true/{}, @,=
+                }
+            })
+            .controller("scoptController", function ($scope) {
+                $scope.data = { name: "Jagadeesh" };
+                $scope.company = "Verizon Data India Pvt Ltd.";
+
+                $scope.greethim = function (name) {
+                    return "Welcome Mr." + name;
+                }
+            });
+    </script>
+
+</head>
+
+<body ng-app="exampleApp" ng-controller="scoptController">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3 class="text-success">{{company}}</h3>
+            Datect Binding from Controller :
+            <input ng-model="data.name" type="text"/>
+        </div>
+        <br />
+        <br />
+        In directive
+        <div style="background-color:yellow" scope-demo greethim=greethim(data.name) username=data.name></div>
+    </div>
+
+</body>
+</html>

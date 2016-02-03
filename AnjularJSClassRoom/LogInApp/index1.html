@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-app="loginApp" ng-controller="LoginController">
+        <h2 class="text-success"></h2>
+        <div class="well">
+            <form ng-submit="Checkuser(user)">
+                User Name : <input type="text" ng-model="user.usernmae" />
+                <br />
+                <br />
+                Password : <input type="password" ng-model="user.password" />
+                <br />
+                <br />
+                <input type="submit" class="btn-primary" value="Login" />
+            </form>
+        </div>
+        <div style="background-color:yellow">
+            <div ng-if="isAuthenticated">
+                <span class="text-success">{{message}}</span>
+            </div>
+            <div ng-if="!isAuthenticated">
+                <span class="text-danger">{{message}}</span>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="app.js"></script>    
+</body>
+</html>
