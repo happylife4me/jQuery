@@ -24,7 +24,7 @@
     <div id="taskToShow">
         <ul>
             <li ng-repeat="oneTask in tasks track by $index">
-                <input type="checkbox" ng-model="oneTask.status" />
+                <input type="checkbox" ng-model="oneTask.status" ng-change="changeStatus($index)" />
                 <span contenteditable="false" ng-keydown="enterAgain(oneTask.taskMsg)" ng-dblclick="contentEdit(oneTask.taskMsg)" class="done-{{oneTask.status}}">
                     {{oneTask.taskMsg}}
                 </span>

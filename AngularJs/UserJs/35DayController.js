@@ -23,6 +23,14 @@ app.controller("app", function ($scope) {
     };
 
     $scope.contentEdit = function (msg) {
+
+        for (i = 0; i < $scope.tasks.length; i++) {
+            if ($scope.tasks[i].taskMsg == msg) {
+                $scope.tasks[i].taskMsg = event.target.innerText;
+            }
+        }
+        localStorage["taskList"] = JSON.stringify($scope.tasks);
+        console.log($scope.tasks);
         event.target.contentEditable = event.target.contentEditable == "false" ? "true" : "false";
 
     };
@@ -30,9 +38,14 @@ app.controller("app", function ($scope) {
     $scope.enterAgain = function (msg) {
         if (event.which == 13 && msg != "")
         {
-            $scope.contentEdit();
+            $scope.contentEdit(msg);
             console.log($scope.tasks);
-            localStorage["taskList"] = JSON.stringify($scope.tasks);
         }
+    };
+
+    $scope.changeStatus = function (index) {
+        console.log(index);
+        $scope.tasks[index].status != $scope.tasks[index].status
+        localStorage["taskList"] = JSON.stringify($scope.tasks);
     };
 });
